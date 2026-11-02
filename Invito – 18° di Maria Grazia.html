@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Invito – 18° di Maria Grazia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120a10">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Invito 18°">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8C%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#f4c9d2;--rose2:#e59aac;--sil:#e8ebf0;--sil2:#9aa3b2;--gold:#d9a441;--ink:#5a3d4a;--bg:#120a10}
+:root:not([data-theme="light"]){color-scheme:light}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:var(--bg);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;overflow:hidden}
+#stage{position:relative;height:min(100vh,calc(100vw*16/9));aspect-ratio:9/16;max-width:100vw;overflow:hidden;container-type:size;border-radius:0}
+.page{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:calc(6cqh + env(safe-area-inset-top,0px)) 6cqw calc(4cqh + env(safe-area-inset-bottom,0px));text-align:center;opacity:0;pointer-events:none;transition:opacity .7s,transform .7s;transform:scale(1.04);
+background:
+radial-gradient(circle at 20% 15%,rgba(255,255,255,.75) 0 1.5px,transparent 2.5px) 0 0/38px 41px,
+radial-gradient(circle at 70% 60%,rgba(255,255,255,.9) 0 1px,transparent 2px) 0 0/27px 31px,
+radial-gradient(circle at 40% 80%,rgba(255,240,245,.8) 0 2px,transparent 3px) 0 0/53px 47px,
+radial-gradient(circle at 30% 20%,rgba(255,255,255,.55),transparent 45%),
+linear-gradient(155deg,#f7d6dd 0%,#e9edf3 35%,#f0b9c6 62%,#cfd5df 82%,#f4c9d2 100%)}
+.page.on{opacity:1;pointer-events:auto;transform:none}
+.glit{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.7) 50%,transparent 60%) -150% 0/250% 100%;animation:sweep 5s infinite}
+@keyframes sweep{to{background-position:150% 0}}
+.script{font-family:'Great Vibes','Snell Roundhand','Apple Chancery',cursive;font-weight:400}
+.chrome{background:linear-gradient(180deg,#fff 0%,#c9d0db 40%,#8f99a9 55%,#eef1f6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 #7d8797) drop-shadow(0 3px 3px rgba(90,61,74,.35))}
+h1.script{font-size:12cqw;line-height:1.1}
+.hint{font-size:4.4cqw;font-weight:700;color:var(--ink);letter-spacing:.02em}
+.spark{position:absolute;color:#fff;text-shadow:0 0 6px #fff,0 0 12px var(--rose2);animation:tw 2.4s infinite;pointer-events:none}
+@keyframes tw{50%{opacity:.15;transform:scale(.6)}}
+
+/* Envelope */
+.env{position:relative;width:74cqw;height:50cqw;margin:auto 0;filter:drop-shadow(0 12px 14px rgba(90,61,74,.4))}
+.env .body{position:absolute;inset:0;border-radius:2cqw;background:linear-gradient(135deg,#f6dbe1,#d98fa3 45%,#f3c3cf 70%,#e6a4b5);border:.4cqw solid #fff}
+.env .l,.env .r{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(135deg,#f9fafc,#aab2c0 50%,#eef0f5)}
+.env .l{left:0;clip-path:polygon(0 0,100% 50%,0 100%)}
+.env .r{right:0;clip-path:polygon(100% 0,0 50%,100% 100%)}
+.env .bot{position:absolute;left:0;right:0;bottom:0;height:60%;background:linear-gradient(180deg,#dfe3ea,#8f99a9);clip-path:polygon(0 100%,50% 0,100% 100%);opacity:.95}
+.env .flap{position:absolute;left:0;right:0;top:0;height:62%;background:linear-gradient(180deg,#ffffff,#b9c1cf 60%,#f0c2cd);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s}
+.env.open .flap{transform:rotateX(180deg)}
+.seal{position:absolute;left:50%;top:55%;width:22cqw;height:22cqw;margin:-11cqw 0 0 -11cqw;border:0;border-radius:50%;cursor:pointer;z-index:5;
+background:radial-gradient(circle at 32% 28%,#fff2c9 0 6%,#f0b3c1 22%,#d8788f 60%,#a94a68 100%);
+box-shadow:inset 0 -1.4cqw 2cqw rgba(110,20,50,.55),inset 0 1cqw 1.6cqw rgba(255,255,255,.6),0 1.6cqw 2.4cqw rgba(60,10,30,.55),0 0 0 1.2cqw rgba(217,164,65,.55);
+animation:pulse 1.8s infinite;transition:transform .3s}
+.seal:after{content:"";position:absolute;inset:2.2cqw;border-radius:50%;border:.5cqw dotted rgba(255,232,170,.9)}
+.seal:active{transform:scale(.9)}
+@keyframes pulse{50%{box-shadow:inset 0 -1.4cqw 2cqw rgba(110,20,50,.55),inset 0 1cqw 1.6cqw rgba(255,255,255,.6),0 1.6cqw 2.4cqw rgba(60,10,30,.55),0 0 0 2.4cqw rgba(217,164,65,.2)}}
+.seal span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Great Vibes',cursive;font-size:10cqw;color:#ffe9ad;text-shadow:0 -.3cqw 0 #7a2a45,0 .3cqw .4cqw #fff3;z-index:1}
+.seal span i{font-style:normal;display:inline-block}
+.seal span i+i{margin-left:-3.2cqw;transform:translateY(1cqw);color:#fff5d0}
+
+/* Page 2 */
+.big{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:38cqw;line-height:.9;margin-top:4cqh;position:relative;letter-spacing:-.02em;
+background:radial-gradient(circle at 20% 30%,#fff 0 2px,transparent 3px) 0 0/14px 14px,linear-gradient(180deg,#fff 0%,#d3d9e3 35%,#7f8a9c 52%,#e9edf3 70%,#b8c0cd 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+filter:drop-shadow(.6cqw .6cqw 0 #8a94a5) drop-shadow(1.2cqw 1.4cqw 0 #6d7789) drop-shadow(0 2cqw 2cqw rgba(90,61,74,.45))}
+.name{font-size:15cqw;margin-top:1cqh;line-height:1.1}
+.when{font-size:5.6cqw;font-weight:700;color:var(--ink);margin-top:3.5cqh;line-height:1.35;padding:0 2cqw}
+.icons{display:flex;gap:6cqw;margin-top:2cqh;justify-content:center}
+.ic{display:flex;flex-direction:column;align-items:center;gap:1.4cqh;text-decoration:none;color:var(--ink);font-weight:700;font-size:4.2cqw;background:none;border:0;font-family:inherit;cursor:pointer}
+.ic b{width:21cqw;height:21cqw;border-radius:50%;display:flex;align-items:center;justify-content:center;
+background:radial-gradient(circle at 30% 25%,#fff,#cfd5df 45%,#8f99a9 100%);
+box-shadow:inset 0 0 0 .8cqw #eef1f6,inset 0 0 0 1.4cqw #9aa3b2,inset 0 -1cqw 1.6cqw rgba(0,0,0,.25),0 1.2cqw 2cqw rgba(90,61,74,.4);transition:transform .2s}
+.ic:active b{transform:scale(.92)}
+.ic svg{width:9.5cqw;height:9.5cqw;stroke:#5a3d4a;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.foot{margin-top:auto;font-size:3.5cqw;color:var(--ink);font-weight:500;padding:0 4cqw;line-height:1.3;font-style:italic;position:relative;z-index:2}
+.disco{position:absolute;left:-9cqw;bottom:-5cqw;width:38cqw;height:38cqw;z-index:1;animation:spin 14s linear infinite;filter:drop-shadow(0 1cqw 2cqw rgba(60,30,50,.5))}
+.disco.sm{position:relative;left:0;bottom:0;width:26cqw;height:26cqw}
+@keyframes spin{to{transform:rotate(360deg)}}
+.content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;width:100%;flex:1}
+
+/* Page 3 */
+.deco{position:absolute;z-index:1;filter:drop-shadow(0 1cqw 1.4cqw rgba(60,30,50,.4))}
+.soon{font-size:16cqw;margin-top:3cqh}
+.back{margin-top:auto;position:relative;z-index:3;width:16cqw;height:16cqw;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 30% 25%,#fff,#cfd5df 45%,#8f99a9);box-shadow:inset 0 0 0 .8cqw #eef1f6,inset 0 0 0 1.3cqw #9aa3b2,0 1.2cqw 2cqw rgba(90,61,74,.4)}
+.back svg{width:8cqw;height:8cqw;stroke:#5a3d4a;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.modal{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:8cqw;background:rgba(90,61,74,.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .4s}
+.modal.on{opacity:1;pointer-events:auto}
+.panel{position:relative;width:100%;padding:8cqw 6cqw 6cqw;text-align:center;border-radius:5cqw;background:linear-gradient(155deg,#f7d6dd,#e9edf3 45%,#f0b9c6);border:.8cqw solid #eef1f6;box-shadow:0 0 0 .5cqw #9aa3b2,0 3cqw 5cqw rgba(60,20,40,.5);transform:scale(.9);transition:transform .4s}
+.modal.on .panel{transform:none}
+.panel h2{font-size:10cqw;line-height:1.15;margin-bottom:2cqh}
+.panel p{font-size:4.6cqw;font-weight:700;color:var(--ink);margin-bottom:2.4cqh}
+.opt{display:block;width:100%;margin-top:1.6cqh;padding:3.4cqw 2cqw;border:0;border-radius:10cqw;cursor:pointer;font-family:inherit;font-weight:700;font-size:5cqw;color:var(--ink);background:radial-gradient(circle at 30% 25%,#fff,#cfd5df 50%,#9aa3b2);box-shadow:inset 0 0 0 .5cqw #eef1f6,0 1cqw 1.8cqw rgba(90,61,74,.4)}
+.opt:active{transform:scale(.96)}
+.panel textarea{width:100%;height:24cqw;padding:3cqw;border-radius:3cqw;border:.5cqw solid #9aa3b2;background:rgba(255,255,255,.85);font-family:inherit;font-size:4.8cqw;font-weight:500;color:var(--ink);resize:none}
+.x{position:absolute;right:3cqw;top:2cqw;border:0;background:none;font-size:8cqw;color:var(--ink);cursor:pointer;line-height:1}
+:focus-visible{outline:.7cqw solid var(--ink);outline-offset:.6cqw}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<radialGradient id="dg" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#c3cad6"/><stop offset="1" stop-color="#6f7a8c"/></radialGradient>
+<g id="ball"><circle cx="50" cy="50" r="46" fill="url(#dg)"/>
+<g stroke="#5b6577" stroke-width=".8" fill="none" opacity=".7"><ellipse cx="50" cy="50" rx="46" ry="14"/><ellipse cx="50" cy="50" rx="46" ry="30"/><ellipse cx="50" cy="50" rx="14" ry="46"/><ellipse cx="50" cy="50" rx="30" ry="46"/><line x1="4" y1="50" x2="96" y2="50"/><line x1="50" y1="4" x2="50" y2="96"/></g>
+<g fill="#fff"><rect x="30" y="24" width="7" height="7" opacity=".9"/><rect x="58" y="36" width="6" height="6"/><rect x="40" y="62" width="7" height="7" opacity=".8"/><rect x="66" y="66" width="5" height="5"/><rect x="22" y="48" width="5" height="5"/></g>
+<g fill="#f0a3b5" opacity=".85"><rect x="47" y="20" width="6" height="6"/><rect x="72" y="50" width="6" height="6"/><rect x="28" y="70" width="6" height="6"/></g></g>
+</defs></svg>
+
+<div id="stage">
+
+<!-- PAGINA 1 -->
+<section class="page on" id="p1" aria-label="Copertina">
+<div class="glit"></div>
+<span class="spark" style="left:12%;top:14%;font-size:5cqw">✦</span><span class="spark" style="right:10%;top:24%;font-size:4cqw;animation-delay:.8s">✦</span><span class="spark" style="left:16%;bottom:24%;font-size:6cqw;animation-delay:1.4s">✦</span><span class="spark" style="right:14%;bottom:18%;font-size:4cqw;animation-delay:.3s">✦</span>
+<h1 class="script chrome">Sei stato invitato!</h1>
+<div class="env" id="env">
+<div class="body"></div><div class="l"></div><div class="r"></div><div class="bot"></div><div class="flap"></div>
+<button class="seal" id="seal" aria-label="Apri l'invito"><span><svg viewBox="0 0 64 48" width="52%" aria-hidden="true" style="filter:drop-shadow(0 -.3cqw 0 #7a2a45) drop-shadow(0 .4cqw .5cqw rgba(90,20,45,.6))"><path d="M6 38L4 14l14 12L32 6l14 20 14-12-2 24z" fill="#ffe9ad" stroke="#fff5d0" stroke-width="1.5" stroke-linejoin="round"/><rect x="7" y="38" width="50" height="6" rx="2" fill="#f0c66a"/><circle cx="4" cy="13" r="3" fill="#fff5d0"/><circle cx="32" cy="5" r="3.2" fill="#fff5d0"/><circle cx="60" cy="13" r="3" fill="#fff5d0"/><circle cx="32" cy="30" r="2.6" fill="#d8788f"/></svg></span></button>
+</div>
+<p class="hint" style="margin-bottom:6cqh">clicca sul sigillo di cera per aprire l'invito!</p>
+</section>
+
+<!-- PAGINA 2 -->
+<section class="page" id="p2" aria-label="Invito">
+<div class="glit"></div>
+<svg class="disco" viewBox="0 0 100 100"><use href="#ball"/></svg>
+<span class="spark" style="left:10%;top:8%;font-size:5cqw">✦</span><span class="spark" style="right:9%;top:14%;font-size:4cqw;animation-delay:1s">✦</span><span class="spark" style="right:12%;top:55%;font-size:5cqw;animation-delay:.5s">✦</span>
+<div class="content">
+<p class="foot" style="margin:0 0 1cqh">Si prega di dare conferma entro il 25 Novembre.<br>Segnalare eventuali intolleranze</p>
+<div class="big">18<span style="font-size:.4em;vertical-align:top;position:relative;top:.15em">th</span></div>
+<div class="script chrome name">Maria Grazia</div>
+<p class="when">Ti aspetto il 13 Dicembre 2026<br>Ore 19:30</p>
+<p class="hint" style="margin-top:3cqh;font-size:4cqw">clicca sulle icone per maggiori info</p>
+<div class="icons">
+<a class="ic" href="https://www.google.com/maps/search/?api=1&query=Black+%26+White+Monterusciello" target="_blank" rel="noopener"><b><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></b>Location</a>
+<button class="ic" id="goDress"><b><svg viewBox="0 0 24 24"><path d="M9 3l3 3 3-3 2 5-3 2 2 11H8l2-11-3-2z"/></svg></b>Dresscode</button>
+<button class="ic" id="goConf"><b><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></b>Conferma</button>
+</div>
+<div class="icons" style="margin-top:1.2cqh">
+<button class="ic" id="goAll"><b><svg viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5"/><circle cx="12" cy="18" r=".6"/></svg></b>Allergeni</button>
+<button class="ic" id="goPl"><b><svg viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="7" rx="1.5"/><rect x="17" y="14" width="4" height="7" rx="1.5"/></svg></b>Playlist &#127926;</button>
+</div>
+</div>
+</section>
+
+<!-- PAGINA 3 -->
+<section class="page" id="p3" aria-label="Dress code">
+<div class="glit"></div>
+<span class="spark" style="left:9%;top:12%;font-size:5cqw">✦</span><span class="spark" style="right:9%;top:30%;font-size:4cqw;animation-delay:1s">✦</span><span class="spark" style="left:8%;top:55%;font-size:4cqw;animation-delay:.6s">✦</span><span class="spark" style="right:10%;bottom:26%;font-size:5cqw;animation-delay:1.3s">✦</span>
+<div class="content" style="justify-content:center;gap:4cqw;padding-bottom:18cqw">
+<svg class="deco" style="position:relative;width:30cqw;height:30cqw;flex:none;animation:spin 16s linear infinite" viewBox="0 0 100 100"><use href="#ball"/></svg>
+<div style="text-align:center">
+<h1 class="script chrome" style="font-size:15cqw">Dresscode:</h1>
+<p class="script chrome soon" style="margin-top:1cqw">Total Black</p>
+</div>
+<svg class="deco" style="position:relative;width:26cqw;height:34cqw;flex:none" viewBox="0 0 60 80" fill="none" stroke="#8f99a9" stroke-width="3" stroke-linecap:round><path d="M6 8h48L30 40z" fill="#eef1f6" fill-opacity=".8"/><path d="M12 15h36l-18 20z" fill="#f0a3b5" stroke="none"/><path d="M30 40v30M16 72h28"/><path d="M40 4l14-4" stroke="#d9a441"/><circle cx="46" cy="14" r="4" fill="#d9426a" stroke="none"/></svg>
+<button class="back" id="back" style="position:absolute;left:50%;margin:0 0 0 -8cqw;bottom:0" aria-label="Torna all'invito"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+</div>
+</section>
+
+<div class="modal" id="mConf" role="dialog" aria-label="Conferma presenza">
+<div class="panel"><button class="x" data-close aria-label="Chiudi">×</button>
+<h2 class="script chrome">Conferma presenza</h2>
+<p>Sarai presente al mio diciottesimo?</p>
+<button class="opt" id="yes">Sì, ci sarò</button>
+<button class="opt" id="no">No, non potrò esserci</button></div></div>
+
+<div class="modal" id="mAll" role="dialog" aria-label="Allergeni">
+<div class="panel"><button class="x" data-close aria-label="Chiudi">×</button>
+<h2 class="script chrome">Allergeni</h2>
+<p>Hai allergie o intolleranze? Scrivile qui.</p>
+<textarea id="alltxt" maxlength="300" aria-label="Allergie o intolleranze"></textarea>
+<button class="opt" id="sendAll">Invia su WhatsApp</button></div></div>
+
+<div class="modal" id="mPl" role="dialog" aria-label="Playlist">
+<div class="panel"><button class="x" data-close aria-label="Chiudi">×</button>
+<h2 class="script chrome">La playlist</h2>
+<p>🎶 Quali canzoni vorresti nella playlist del mio diciottesimo?</p>
+<p style="font-size:3.8cqw;font-weight:500;font-style:italic">Scrivi qui le canzoni che non possono assolutamente mancare! (Nome delle canzoni e, se lo sai, artista)</p>
+<textarea id="pltxt" maxlength="600" style="height:32cqw" aria-label="Canzoni per la playlist"></textarea>
+<p id="plerr" style="font-size:3.8cqw;margin:1cqh 0 0;min-height:1.3em;color:#a3264f"></p>
+<button class="opt" id="sendPl">Invia le tue canzoni 💌</button></div></div>
+
+</div>
+
+<script>
+var WA='https://wa.me/393770833927?text=';
+function openWA(t){window.open(WA+encodeURIComponent(t),'_blank','noopener')}
+function modal(id,on){document.getElementById(id).classList.toggle('on',on)}
+document.getElementById('goConf').addEventListener('click',function(){modal('mConf',true)});
+document.getElementById('goAll').addEventListener('click',function(){modal('mAll',true)});
+document.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){modal('mConf',false);modal('mAll',false);modal('mPl',false)})});
+document.getElementById('yes').addEventListener('click',function(){modal('mConf',false);openWA('Ciao! Confermo la mia presenza al diciottesimo di Maria Grazia!')});
+document.getElementById('no').addEventListener('click',function(){modal('mConf',false);openWA('Ciao! Purtroppo non potrò essere presente al diciottesimo di Maria Grazia.')});
+document.getElementById('sendAll').addEventListener('click',function(){
+  var v=document.getElementById('alltxt').value.trim();
+  modal('mAll',false);
+  openWA(v?'Sono allergica/o a: '+v:'Sono allergica/o a...');
+});
+document.getElementById('goPl').addEventListener('click',function(){document.getElementById('plerr').textContent='';modal('mPl',true)});
+document.getElementById('sendPl').addEventListener('click',function(){
+  var t=document.getElementById('pltxt'),v=t.value.trim();
+  if(!v){document.getElementById('plerr').textContent='Scrivi almeno una canzone!';t.focus();return}
+  modal('mPl',false);
+  openWA('🎶 Playlist del diciottesimo\nCiao! Vorrei suggerire queste canzoni per la festa:\n'+v);
+});
+var pages=['p1','p2','p3'];
+function go(id){pages.forEach(function(p){document.getElementById(p).classList.toggle('on',p===id)})}
+document.getElementById('seal').addEventListener('click',function(){
+  document.getElementById('env').classList.add('open');
+  setTimeout(function(){go('p2')},750);
+});
+document.getElementById('goDress').addEventListener('click',function(){go('p3')});
+document.getElementById('back').addEventListener('click',function(){go('p2')});
+</script>
+</body>
+</html>
